@@ -13,7 +13,7 @@
     <script type="text/javascript">
         const params = new URLSearchParams(window.location.search);
         if (params.has('app')) {
-            const app = atob(params.get('app'));
+            const app = atob(params.get('app').replaceAll('_', '=').replaceAll('-', '/'));
         }
         new QRCode(document.getElementById("qrcode"), app);
     </script>
