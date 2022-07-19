@@ -18,7 +18,7 @@
         }
         var d = {
             '0': 'Error in qr.html: app not found',
-                        '1': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
+            '1': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
             '2': 'zpkd1://store-cdn.huami.com/custom_user_app/20220617/IZdmLIViiwHLDhmjITVGMtCuBbWdFykM/t-rex2.zip',
             '3': 'zpkd1://store-cdn.huami.com/custom_user_app/20220704/owFGyUpCtnwqMLrGiVkAVrLsgVPmfttp/t-rex2.zip',
             '4': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/hCjxslgsqHdjQhxMScdkghClGjwfoDdl/t-rex2.zip',
@@ -122,7 +122,11 @@
             '102': 'zpkd1://store-cdn.huami.com/market_light_app/20220706/lNFOCHpLnnYjEGmtCxMxBtjysTFHrYWj.zip',
             '103': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/hzvdbwSmbVCgwjDxisiCHPMyVrWQJqZN.zip'
         };
-        new QRCode(document.getElementById("qrcode"), d[app]);
+        if (app in d){
+            new QRCode(document.getElementById("qrcode"), d[app]);
+        }else{
+            new QRCode(document.getElementById("qrcode"), atob(app.replaceAll('_', '=').replaceAll('-', '/').replaceAll('*', '+')));
+        }
     </script>
 </body>
 </html>
