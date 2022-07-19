@@ -1162,7 +1162,7 @@
     <script>
         function wf_inst() {
             var link = document.getElementById('wf_link').value;
-            link = btoa(link).replaceAll('/', '-').replaceAll('+', '*').replaceAll('=', '_');
+            link = btoa(link.replace("http://", "watchface://").replace("https://", "watchface://")).replaceAll('/', '-').replaceAll('+', '*').replaceAll('=', '_');
             window.location = "qr.html?app=" + link;
         }
     </script>
