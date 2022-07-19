@@ -6,16 +6,124 @@
     <title>Install QR</title>
 </head>
 <body>
-    <h1>Ваш QR-Code для установки:</h1>
+    <h1>Ваш QR-Code для установки:</h1><br>
     <script src="assets/qrcode.min.js"></script>
 
     <div id="qrcode"></div>
     <script type="text/javascript">
         const params = new URLSearchParams(window.location.search);
         if (params.has('app')) {
-            const app = atob(params.get('app').replaceAll('_', '=').replaceAll('-', '/'));
+            const app = params.get('app');
+        }else{
+            const app = '0';
         }
-        new QRCode(document.getElementById("qrcode"), app);
+        var d = {
+            '0': 'Error in qr.html: app is not found',
+            '1': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
+'2': 'zpkd1://store-cdn.huami.com/custom_user_app/20220617/IZdmLIViiwHLDhmjITVGMtCuBbWdFykM/t-rex2.zip',
+'3': 'zpkd1://store-cdn.huami.com/custom_user_app/20220704/owFGyUpCtnwqMLrGiVkAVrLsgVPmfttp/t-rex2.zip',
+'4': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/hCjxslgsqHdjQhxMScdkghClGjwfoDdl/t-rex2.zip',
+'5': 'zpkd1://store-cdn.huami.com/custom_user_app/20220629/uLCQUzCZHmghyGosVlEnwHXSTtuykHAU/t-rex2.zip',
+'6': 'zpkd1://store-cdn.huami.com/market_light_app/20220524/kOPCdkzZypspEvAInPcbuZxVxGPkvMgT.zip',
+'7': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/tEBCstuQsfjSNUjtjRodWtPkYFUWEgMc.zip',
+'8': 'zpkd1://store-cdn.huami.com/market_light_app/20220524/kuNuYdCVUVQydpxpjpniLmEzUwZNvfUc.zip',
+'9': 'zpkd1://store-cdn.huami.com/market_light_app/20220524/OSujOdnGXpZFlyLPLPDpqXrDHlVcGYBt.zip',
+'10': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/mSYyEHXCnLlevbDdLMvtpfrPgbktiyfl.zip',
+'11': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/VEaLXslEHcnQGwkGlXZWkAfFbrzwLRqj.zip',
+'12': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/YhRJRpnGHlfDluDUvTFqMekloJeBRWrJ.zip',
+'13': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/qnzrJyLmuPUVAYVHtuPNsuZnCULPIsSx.zip',
+'14': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/qOlwlWjAuAXEsyiPiAmSqtsjQUHDdcFl.zip',
+'15': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/BGnBDfsOlpCulHCqVnZYEXDTeoaTYXXb.zip',
+'16': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/vwgqzZthzWFTXjVLhlOKxWITYpfHrabP.zip',
+'17': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/jSLMqdHSZKhztQMnSuwvUMBJIgBWLmns.zip',
+'18': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
+'19': 'zpkd1://store-cdn.huami.com/custom_user_app/20220709/dPZVITOAdkLbpfIIXWWKnKAuYvETCeyf/gtr-3.zip',
+'20': 'zpkd1://store-cdn.huami.com/custom_user_app/20220617/bLiREFNYlvbtpWwZVtxmlVGNUcfrFEaG/gtr3.zip',
+'21': 'zpkd1://store-cdn.huami.com/custom_user_app/20220704/RxDZJPIjbkqEeYfJXWEDSimHXRhUVjzD/gtr3.zip',
+'22': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/hvgoDEDQqtaRVHOazVBzxcbRMlalSNEH/gtr3.zip',
+'23': 'zpkd1://store-cdn.huami.com/custom_user_app/20220630/zJvEubvCLbCPolRIJiCLxGvNywkIXdrk/gtr-3.zip',
+'24': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/rVOOOaqSAhvfKDYKFPfTyuVnftstWdDd/gtr-3.zip',
+'25': 'zpkd1://store-cdn.huami.com/custom_user_app/20220701/XmNbItOfJfarfHJlCiZKRbQsGENrfXuW/gtr-3.zip',
+'26': 'zpkd1://store-cdn.huami.com/custom_user_app/20220623/IGPmCxVjRYQuZmdOrNQdkgFHSrRizmuU/gtr-3.zip',
+'27': 'zpkd1://store-cdn.huami.com/custom_user_app/20220629/WCIilaHYtOgSyQWNDAOZeiRMRtKtroUV/gtr3.zip',
+'28': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/oNkWcKGZvlxDFzDZvdTKyINUvfHjCisT/gtr-3.zip',
+'29': 'zpkd1://store-cdn.huami.com/custom_user_app/20220416/AHVWtlEBKBjpqteClUvtkSLUZliWywfJ/gtr3.zip',
+'30': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/DobAdlJMmtiCgMqLtwHXHeLVNXbJahVQ/gtr-3.zip',
+'31': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/UHRMltTDCPSSKItXiQIhMXgcNxLMbVMg/gtr3.zip',
+'32': 'zpkd1://store-cdn.huami.com/market_light_app/20220506/IxosjdRLxrcFJSVgNKccHcnZAtzNxvbU.zip',
+'33': 'zpkd1://store-cdn.huami.com/market_light_app/20220210/rSOqvqxFDEigHyqDrRIHVeEyBGcyOBkX.zip',
+'34': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/CnVKkTNUqGenGogVGKAdZGRcTaoRWUXt.zip',
+'35': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/VyqgPESaDkqprHtKPoJBiMjwceqmwmCH.zip',
+'36': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/bffNGdgTJZnzcLVpLTMGwotbxDpILerW.zip',
+'37': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/RiLFSvrImObTLsjDdXomcavARpXcIiZb.zip',
+'38': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/tIrTLWBDGDIlqjPojWUbASeHlceyEqZr.zip',
+'39': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/HQszVBDsfcEnYCuwoMKAJkTsGuHYTise.zip',
+'40': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/EqKboxziRbHZJXTeRFliwxYgWXxWlwjg.zip',
+'41': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/IesnrYDwRyRLiKYAdcXAhfQdPIgyWOze.zip',
+'42': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/MTBPEqbaQlgjbpStKAOriMYsMSiraeMH.zip',
+'43': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/XfpYItvxBVcnrJLYTwZkUECCqPiAXUJS.zip',
+'44': 'zpkd1://store-cdn.huami.com/market_light_app/20220706/oKrxYBYXcPmJIJkeUfdVQbRhnCyEasCi.zip',
+'45': 'zpkd1://store-cdn.huami.com/custom_user_app/20220719/pBZbilWEwAKWqNiGeiOJseqYTsAjwwUD/480x480-gtr-3-pro.zip',
+'46': 'zpkd1://store-cdn.huami.com/custom_user_app/20220713/tBJAsJYbiwcYxKAFwlkBuEInWkDOLUEJ/gtr-3-pro.zip',
+'47': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
+'48': 'zpkd1://store-cdn.huami.com/custom_user_app/20220709/zevptinSPrjiEBQeZviObRxdSuBqidXw/gtr-3-pro.zip',
+'49': 'zpkd1://store-cdn.huami.com/custom_user_app/20220617/ROWHQyVtHIqapswhOaJBLSzaEobYFCjL/gtr3-pro.zip',
+'50': 'zpkd1://store-cdn.huami.com/custom_user_app/20220704/YoReBLWliwkuDtrJrclAhICONQrhekuE/gtr3-pro.zip',
+'51': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/qREryRZABpJNudKIufvSSHCbbMLKmJIL/gtr3-pro.zip',
+'52': 'zpkd1://store-cdn.huami.com/custom_user_app/20220629/IfunIeHDHRWrypRHTRgOxSkhNoDHUqJh/gtr3-pro.zip',
+'53': 'zpkd1://store-cdn.huami.com/custom_user_app/20220630/wrEMbYqOXJMZJidSXhIivReLQnWCJeoh/gtr-3-pro.zip',
+'54': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/ovqrPwPIcPPvzNcTHPvgryQutZkNRvDh/gtr-3-pro.zip',
+'55': 'zpkd1://store-cdn.huami.com/custom_user_app/20220624/mRyDxXBgLxtgteIheTXmKfjJGPJvwMce/gtr3-pro.zip',
+'56': 'zpkd1://store-cdn.huami.com/custom_user_app/20220701/SQqitAkuJnWwzyKIoLiaIYTfFDlVgHSX/gtr-3-pro.zip',
+'57': 'zpkd1://store-cdn.huami.com/custom_user_app/20220623/HqABoehRvnysrTTzNZtVyxkFYryxMjom/gtr-3-pro.zip',
+'58': 'zpkd1://store-cdn.huami.com/custom_user_app/20220629/QyDITGBmznWiySGkitqOxLxYvuTNvqOV/gtr3-pro.zip',
+'59': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/eBeFtGOIwnvwSXlHqGBmxtAGJPKhOEYN/gtr-3-pro.zip',
+'60': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/gvOWWUAcmVJSUaHNnlbnNZuIoGeTKFPn/gtr-3-pro.zip',
+'61': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/VXCrbPjuQDNHYWNlguMhedKSwxBvbqYl/gtr3-pro.zip',
+'62': 'zpkd1://store-cdn.huami.com/market_light_app/20220506/mDvPmTNCmuZemTpYYcgSWLQXKPFlCiCV.zip',
+'63': 'zpkd1://store-cdn.huami.com/market_light_app/20220210/mebrqlsLoNxlYcPjzQbbFlfxBJpuPSKL.zip',
+'64': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/neiAWxFfQxSXJYbFYwslgoafgAnVnLRR.zip',
+'65': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/PGSlMokqIIJTKPQzUuYzEFszyIAPGeyL.zip',
+'66': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/OIBsSAwjvxQFAqzsfLiRWMjaIcClNojQ.zip',
+'67': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/wwvCBtsInANjffInrabEBhTRTnHVoKzH.zip',
+'68': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/LqefeGRmCujfLJrBnipTiHCcRBVjRABm.zip',
+'69': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/PDrBMRgjJzeVKfXjnmdxupMlESyzINLe.zip',
+'70': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/fRhfNxGKQzIlTrDpXazgnTVFCmeDjPSQ.zip',
+'71': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/MZqBclrAxwUcLcieVYbhjDwTiYCEcNZm.zip',
+'72': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/UQSJjuOVivRgVzYjVIpsABSSpIMAHXfa.zip',
+'73': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/IixNntQlYNopidnNvjhcZTgWpHuqbAQJ.zip',
+'74': 'zpkd1://store-cdn.huami.com/market_light_app/20220706/MjPCRXZiFltEEgMJCKoRmgEBOJUrMXmq.zip',
+'75': 'zpkd1://store-cdn.huami.com/custom_user_app/20220719/qWIfKuEpRfzrvqiPbHEOEVUzUnkMFeEK/390x450-gts-3.zip',
+'76': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/znocRwHONOrVSaXuDhYhiFwIxWNbESup/all-devices.zip',
+'77': 'zpkd1://store-cdn.huami.com/custom_user_app/20220709/stcFeQTYlMSgKsdZQFENshntsUBpJJmz/gts-3.zip',
+'78': 'zpkd1://store-cdn.huami.com/custom_user_app/20220617/ECzIZmyMwBGpvPrxvHcjBLgcaNzrvHZj/gts3.zip',
+'79': 'zpkd1://store-cdn.huami.com/custom_user_app/20220704/kvQYmuUReMmJNgPhgnbRmLyFMKqxugfl/gts3.zip',
+'80': 'zpkd1://store-cdn.huami.com/custom_user_app/20220711/DsHfrQHAliLGclpdxFpQCuJLMKRrojEX/gts3.zip',
+'81': 'zpkd1://store-cdn.huami.com/custom_user_app/20220703/EdnSqPhTPKkQuTlDNFsDERfKTlhPnqNR/gts-3.zip',
+'82': 'zpkd1://store-cdn.huami.com/custom_user_app/20220630/hkPUcmIKPWdSegbVIzKjzMgEjIqDRWLu/gts-3.zip',
+'83': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/inCrzGOKkrcjOQVzKVazmUPxIHCEbBwf/gts-3.zip',
+'84': 'zpkd1://store-cdn.huami.com/custom_user_app/20220701/AVgfeJdcOQojrSnPjPGfNZkhqArORipn/gts-3.zip',
+'85': 'zpkd1://store-cdn.huami.com/custom_user_app/20220623/MHwpkzwRYRTuCxLQxjOdWXZuWwoucgpS/gts-3.zip',
+'86': 'zpkd1://store-cdn.huami.com/custom_user_app/20220629/oJINPpTbGAUqCngypMfkUCRADoblbouS/gts3.zip',
+'87': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/wjRJBAGwGgviKtddqveVsgYiscyJVjqj/gts-3.zip',
+'88': 'zpkd1://store-cdn.huami.com/custom_user_app/20220705/BLPMdUkyXhjGtbsLWCPOswcGAMmLCWBd/gts-3.zip',
+'89': 'zpkd1://store-cdn.huami.com/custom_user_app/20220712/mmBgcjeHJsGpJDJkwCaCBIDqFoYzMWYs/gts3.zip',
+'90': 'zpkd1://store-cdn.huami.com/market_light_app/20220506/SyWrKTWnLXhtbvTzWUaHgrxprSaBispp.zip',
+'91': 'zpkd1://store-cdn.huami.com/market_light_app/20220210/cYmMybhHBRvEkNUjrdifKoYrXdmjNvcp.zip',
+'92': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/zTkhuXCTgHDTdFxEEhyRuiqLEHBNvxax.zip',
+'93': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/sUxsUsbsYfRoNiiQWNHLJnyjJxUASgLv.zip',
+'94': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/IhWJCrnTXxUGLVdzNNpnixaNEfIzPhKF.zip',
+'95': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/arLEpOgZQKRJBkkxAxjCtOiAwnbuJINJ.zip',
+'96': 'zpkd1://store-cdn.huami.com/market_light_app/20211011/qZPpkOkGpMbrhpHqziHWCYCTZtaUrfGs.zip',
+'97': 'zpkd1://store-cdn.huami.com/market_light_app/20211012/khATVbWnvrcmrAVslXzULSMiHFavyPyU.zip',
+'98': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/JGCYAjKCNAxSLRnpRIvKpzZGcRMTRAUl.zip',
+'99': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/DLMdETbqIYTSjzZyjXbXURXFyBQSlToV.zip',
+'100': 'zpkd1://store-cdn.huami.com/market_light_app/20220209/ESUAPNNgKTIecmExoHyLvGQiIlaKIQZq.zip',
+'101': 'zpkd1://store-cdn.huami.com/market_light_app/20211009/TwvDUclokZXOWDGtpWuQtwrzrktmaGEP.zip',
+'102': 'zpkd1://store-cdn.huami.com/market_light_app/20220706/lNFOCHpLnnYjEGmtCxMxBtjysTFHrYWj.zip',
+'103': 'zpkd1://store-cdn.huami.com/market_light_app/20220525/hzvdbwSmbVCgwjDxisiCHPMyVrWQJqZN.zip'
+        };
+        new QRCode(document.getElementById("qrcode"), d[app]);
     </script>
 </body>
 </html>
