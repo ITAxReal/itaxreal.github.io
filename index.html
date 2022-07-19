@@ -1149,7 +1149,7 @@
         <h1>Установка циферблата по прямой ссылке:</h1>
         <div class="row">
             <div class="col"><input id="wf_link" class="form-control" type="text" /></div>
-            <div class="col"><button id="wf_install" class="btn btn-primary" type="button">WatchFace</button></div>
+            <div class="col"><button id="wf_install" class="btn btn-primary" type="button" onclick="wf_inst();">WatchFace</button></div>
         </div>
     </div>
 <div class="container">
@@ -1160,11 +1160,11 @@
     </div>
 </div>
     <script>
-        $('#wf_install').on('click', function(event) {
+        function wf_inst() {
             var link = document.getElementById('wf_link').value;
             link = btoa(link).replaceAll('/', '-').replaceAll('+', '*').replaceAll('=', '_');
             window.location = "qr.html?app=" + link;
-        });
+        }
     </script>
     <footer class="py-5 bg-black">
         <div class="container">
