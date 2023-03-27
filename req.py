@@ -17,7 +17,7 @@ appplatform = "android_phone"
 devices = list(range(220, 280)) + list(range(400, 450)) + [7995648, 7995649, 7930112, 7930113] #415, 414, 241, 242, 246, 247
 countries = ['US', 'RU', 'CH', 'UA']
 langs = ['ru_RU']
-#APP_TOKEN here
+# APP_TOKEN here
 app_token = "RQVBQEJyQktGXip6SltGSlpuQkZgBAAEAAAAAP4CH8dQnFiIyheLSM89EhSmu4GNhYRkCn-4GDK_ws5Tp1rG22kZkrazk94dcxvn_I3Ag7296PaKgR-bLSL7VAqbMLae5Q02CYmW2CC0GAW-nOcdb2mEtQP-LRbqeHZTS2guu3Lm4imbUB2DF9iK0MpMBOKFeDHOiYvH6xGGCpQfrh8apXytVKOdgI9-eq8Tn"
 
 
