@@ -1,0 +1,37 @@
+{
+    "DeveloperName": "TestDev",
+    "DeveloperContact": "test@testdev.com, +18005553535",
+    "apps": [
+        {
+            "id": 1,
+            "name": "TestApp",
+            "image": "https://testdev.com/app1/logo.png",
+            "brief_description": "My TestApp!",
+            "description": "With with app you can do absolutely nothing! How awesome it is. Look more here: https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+            "version": "1.0.2",
+            "version_date": "11.09.2001",
+            "screenshots": ["https://testdev.com/app1/screen1.png", "https://testdev.com/app1/screen2.png"],
+            "download_urls": {
+                "230": "https://testdev.com/app1/app-gtr-3-pro.zip",
+                "7930113": "https://testdev.com/app1/app-gtr-4.zip",
+                "7995649": "https://testdev.com/app1/app-gts-4.zip"
+            }
+        },
+        {
+            "id": 2,
+            "name": "TestApp2",
+            "image": "https://testdev.com/app2/logo.png",
+            "brief_description": "My TestApp, but now 2!",
+            "description": "Will give you a lot of butthurt and painful feellings, be careful.",
+            "version": "6.6.6",
+            "version_date": "01.01.1970",
+            "screenshots": ["https://testdev.com/app2/screen1.png", "https://testdev.com/app2/screen2.png"],
+            "download_urls": {
+                "230": "https://testdev.com/app2/app-gtr-3-pro.zip",
+                "7930113": "https://testdev.com/app2/app-gtr-4.zip",
+                "7995649": "https://testdev.com/app2/app-gts-4.zip"
+            }
+        }
+
+    ]
+}
