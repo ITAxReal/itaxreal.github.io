@@ -41,7 +41,7 @@ replacings = {
 app_token = "RQVBQEJyQktGXip6SltGSlpuQkZgBAAEAAAAA6xDRgmGnPFo0nMatkC6eKMFgwxu5Ed0SZvspFWK5sgvsednVYB3RxIXq6fA9YBGhTsc529GNWfeWrlUvDivEPudfpQkqi4MYGxSNWkSYW2BKb5wsppLAa8x4gDkYZLvWRR80XGLImRV3PwgqCG69syndT-udPj8H3u9JyQLwoOUoeJO_uWzcl9uWnGQWKQeU"
 
 
-base_url = "https://api-mifit-ru.huami.com:443/market/devices/{dev}/app?&page=1&per_page=100&userid=8727068155&user_country={ctr}&user_region={reg}&sn={sn}"
+base_url = "https://api-mifit-ru.huami.com:443/market/devices/{dev}/app?&page=1&per_page=500&userid=8727068155&user_country={ctr}&user_region={reg}&sn={sn}"
 headers = {
     "Hm-Privacy-Diagnostics": "false",
     "Country": country,
