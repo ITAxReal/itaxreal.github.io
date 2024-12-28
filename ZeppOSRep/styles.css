@@ -1,0 +1,68 @@
+/* Base Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #fff;
+}
+
+/* Message Box Styling */
+.message-box {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.message-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.message-box p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.redirect-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    background: #ff8c42;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.redirect-link:hover {
+    background: #ff704d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .message-box h1 {
+        font-size: 2rem;
+    }
+
+    .message-box p {
+        font-size: 1rem;
+    }
+
+    .redirect-link {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
